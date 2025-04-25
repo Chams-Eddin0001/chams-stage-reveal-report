@@ -3,8 +3,8 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import dynamic from "react";
+import { AspectRatio } from "@/components/ui/aspect-ratio";
 
-// Fallback for the dynamic icon
 const FallbackIcon = () => (
   <div className="w-10 h-10 bg-cyan-300/20 rounded-full animate-pulse"></div>
 );
@@ -48,25 +48,97 @@ const slides = [
   {
     title: "Aperçu Général",
     content: (
-      <p>Importance des TIC, rôle stratégique de Tunisie Télécom, objectifs du stage</p>
+      <div className="space-y-4">
+        <p>Importance des TIC, rôle stratégique de Tunisie Télécom, objectifs du stage</p>
+        <div className="grid grid-cols-2 gap-4">
+          <AspectRatio ratio={16 / 9} className="bg-muted">
+            <img
+              src="https://source.unsplash.com/488590528505-98d2b5aba04b"
+              alt="Technologies de l'information"
+              className="rounded-lg object-cover w-full h-full transition-all hover:scale-105"
+            />
+          </AspectRatio>
+          <AspectRatio ratio={16 / 9} className="bg-muted">
+            <img
+              src="https://source.unsplash.com/1581091226825-a6a2a5aee158"
+              alt="Infrastructure TIC"
+              className="rounded-lg object-cover w-full h-full transition-all hover:scale-105"
+            />
+          </AspectRatio>
+        </div>
+      </div>
     )
   },
   {
     title: "Tunisie Télécom",
     content: (
-      <p>Historique, évolution, organigramme et fonctionnement des centres</p>
+      <div className="space-y-4">
+        <p>Historique, évolution, organigramme et fonctionnement des centres</p>
+        <div className="grid grid-cols-2 gap-4">
+          <AspectRatio ratio={16 / 9} className="bg-muted">
+            <img
+              src="https://source.unsplash.com/1483058712412-4245e9b90334"
+              alt="Infrastructure Tunisie Télécom"
+              className="rounded-lg object-cover w-full h-full transition-all hover:scale-105"
+            />
+          </AspectRatio>
+          <AspectRatio ratio={16 / 9} className="bg-muted">
+            <img
+              src="https://source.unsplash.com/1487958449943-2429e8be8625"
+              alt="Bâtiment Tunisie Télécom"
+              className="rounded-lg object-cover w-full h-full transition-all hover:scale-105"
+            />
+          </AspectRatio>
+        </div>
+      </div>
     )
   },
   {
     title: "Centre de Transmission",
     content: (
-      <p>FH vs FO, mécanismes de transfert, connecteurs et modules SFP</p>
+      <div className="space-y-4">
+        <p>FH vs FO, mécanismes de transfert, connecteurs et modules SFP</p>
+        <div className="grid grid-cols-2 gap-4">
+          <AspectRatio ratio={16 / 9} className="bg-muted">
+            <img
+              src="https://source.unsplash.com/1518770660439-4636190af475"
+              alt="Circuit de transmission"
+              className="rounded-lg object-cover w-full h-full transition-all hover:scale-105"
+            />
+          </AspectRatio>
+          <AspectRatio ratio={16 / 9} className="bg-muted">
+            <img
+              src="https://source.unsplash.com/1531297484001-80022131f5a1"
+              alt="Équipement de transmission"
+              className="rounded-lg object-cover w-full h-full transition-all hover:scale-105"
+            />
+          </AspectRatio>
+        </div>
+      </div>
     )
   },
   {
     title: "Réseau IP",
     content: (
-      <p>Switchs, Routeurs Cisco ASR 9010, Architecture IP à Kasserine</p>
+      <div className="space-y-4">
+        <p>Switchs, Routeurs Cisco ASR 9010, Architecture IP à Kasserine</p>
+        <div className="grid grid-cols-2 gap-4">
+          <AspectRatio ratio={16 / 9} className="bg-muted">
+            <img
+              src="https://source.unsplash.com/1461749280684-dccba630e2f6"
+              alt="Infrastructure réseau"
+              className="rounded-lg object-cover w-full h-full transition-all hover:scale-105"
+            />
+          </AspectRatio>
+          <AspectRatio ratio={16 / 9} className="bg-muted">
+            <img
+              src="https://source.unsplash.com/1487058792275-0ad4aaf24ca7"
+              alt="Configuration réseau"
+              className="rounded-lg object-cover w-full h-full transition-all hover:scale-105"
+            />
+          </AspectRatio>
+        </div>
+      </div>
     )
   },
   {
