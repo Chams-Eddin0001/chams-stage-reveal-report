@@ -1,8 +1,13 @@
-
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { ChevronLeft, ChevronRight, Cube } from "lucide-react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
+import dynamic from "react";
+
+// Fallback for the dynamic icon
+const FallbackIcon = () => (
+  <div className="w-10 h-10 bg-cyan-300/20 rounded-full animate-pulse"></div>
+);
 
 const slides = [
   {
@@ -126,7 +131,6 @@ const Index = () => {
   return (
     <div className="min-h-screen flex flex-col bg-gradient-to-br from-black via-blue-950 to-cyan-900">
       <div className="flex-1 flex flex-col items-center justify-center p-4 relative overflow-hidden">
-        {/* 3D floating cube decoration */}
         <motion.div 
           className="absolute top-10 right-10 text-cyan-300 opacity-50"
           animate={{
@@ -139,10 +143,9 @@ const Index = () => {
             ease: "easeInOut"
           }}
         >
-          <Cube size={40} />
+          <FallbackIcon />
         </motion.div>
 
-        {/* Slide counter with glowing effect */}
         <div className="absolute top-4 right-4">
           <span className="text-cyan-300 font-mono text-xl bg-black/20 px-4 py-2 rounded-full backdrop-blur-sm border border-cyan-500/30 shadow-[0_0_15px_rgba(0,255,255,0.3)]">
             {currentSlide + 1} / {slides.length}
@@ -202,4 +205,3 @@ const Index = () => {
 };
 
 export default Index;
-
