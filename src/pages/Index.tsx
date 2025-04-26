@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "@/components/ui/button";
@@ -56,6 +55,50 @@ const slides = [
           <br />
           Merci aux membres du jury pour leur évaluation
         </p>
+      </div>
+    )
+  },
+  {
+    title: "Remerciements au Jury",
+    content: (
+      <div className="space-y-4">
+        <div className="flex justify-between items-center mb-8">
+          <img
+            src="https://source.unsplash.com/photo-1605810230434-7631ac76ec81"
+            alt="Logo 1"
+            className="w-24 h-24 object-contain rounded-lg"
+          />
+          <img
+            src="https://source.unsplash.com/photo-1519389950473-47ba0277781c"
+            alt="Logo 2"
+            className="w-24 h-24 object-contain rounded-lg"
+          />
+        </div>
+        <p className="text-xl text-center mb-6">
+          Je tiens à exprimer ma profonde gratitude envers les membres du jury
+          pour leur attention bienveillante et leurs précieux conseils lors de
+          la présentation de mon rapport de stage.
+        </p>
+        <p className="text-lg text-center italic">
+          Votre écoute attentive et votre engagement ont été des sources 
+          d'inspiration et de motivation significatives.
+        </p>
+        <div className="grid grid-cols-2 gap-4 mt-8">
+          <AspectRatio ratio={16 / 9} className="bg-muted">
+            <img
+              src="https://source.unsplash.com/photo-1486312338219-ce68d2c6f44d"
+              alt="Présentation"
+              className="rounded-lg object-cover w-full h-full transition-all hover:scale-105"
+            />
+          </AspectRatio>
+          <AspectRatio ratio={16 / 9} className="bg-muted">
+            <img
+              src="https://source.unsplash.com/photo-1519389950473-47ba0277781c"
+              alt="Jury"
+              className="rounded-lg object-cover w-full h-full transition-all hover:scale-105"
+            />
+          </AspectRatio>
+        </div>
       </div>
     )
   },
