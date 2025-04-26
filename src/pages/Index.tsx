@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "@/components/ui/button";
@@ -294,7 +293,7 @@ const slides = [
     )
   },
   {
-    title: "Remerciements Finals",
+    title: "Remerciements finals",
     content: (
       <div className="space-y-6 text-center">
         <div className="flex justify-between items-center mb-8">
