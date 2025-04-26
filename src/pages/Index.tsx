@@ -1,8 +1,8 @@
+
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import dynamic from "react";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 
 const FallbackIcon = () => (
@@ -13,42 +13,94 @@ const slides = [
   {
     title: "Rapport de Stage d'Initiation",
     content: (
-      <>
+      <div className="space-y-4">
+        <div className="flex justify-between items-center mb-8">
+          <img
+            src="https://source.unsplash.com/1483058712412-4245e9b90334"
+            alt="Logo 1"
+            className="w-24 h-24 object-contain rounded-lg"
+          />
+          <img
+            src="https://source.unsplash.com/1487958449943-2429e8be8625"
+            alt="Logo 2"
+            className="w-24 h-24 object-contain rounded-lg"
+          />
+        </div>
         <p className="mb-4">
           <strong>Tunisie Télécom – Kasserine</strong>
         </p>
         <p className="mb-2">Dabbabi Chams Eddin</p>
         <p className="mb-2">Encadrant : Mbarki Masoud</p>
         <p>06/01/2025 - 01/02/2025</p>
-      </>
+      </div>
     )
   },
   {
     title: "Remerciements",
     content: (
-      <p>
-        Merci à la direction de Tunisie Télécom et à M. Mbarki Masoud
-        <br />
-        Merci aux membres du jury pour leur évaluation
-      </p>
+      <div className="space-y-4">
+        <div className="flex justify-between items-center mb-8">
+          <img
+            src="https://source.unsplash.com/1483058712412-4245e9b90334"
+            alt="Logo 1"
+            className="w-24 h-24 object-contain rounded-lg"
+          />
+          <img
+            src="https://source.unsplash.com/1487958449943-2429e8be8625"
+            alt="Logo 2"
+            className="w-24 h-24 object-contain rounded-lg"
+          />
+        </div>
+        <p>
+          Merci à la direction de Tunisie Télécom et à M. Mbarki Masoud
+          <br />
+          Merci aux membres du jury pour leur évaluation
+        </p>
+      </div>
     )
   },
   {
     title: "Sommaire",
     content: (
-      <ul className="list-disc pl-6 space-y-2">
-        <li>Aperçu Général</li>
-        <li>Tunisie Télécom</li>
-        <li>Centre de Transmission</li>
-        <li>Réseau IP</li>
-        <li>Conclusion</li>
-      </ul>
+      <div className="space-y-4">
+        <div className="flex justify-between items-center mb-8">
+          <img
+            src="https://source.unsplash.com/1483058712412-4245e9b90334"
+            alt="Logo 1"
+            className="w-24 h-24 object-contain rounded-lg"
+          />
+          <img
+            src="https://source.unsplash.com/1487958449943-2429e8be8625"
+            alt="Logo 2"
+            className="w-24 h-24 object-contain rounded-lg"
+          />
+        </div>
+        <ul className="list-disc pl-6 space-y-2">
+          <li>Aperçu Général</li>
+          <li>Tunisie Télécom</li>
+          <li>Centre de Transmission</li>
+          <li>Réseau IP</li>
+          <li>Conclusion</li>
+        </ul>
+      </div>
     )
   },
   {
     title: "Aperçu Général",
     content: (
       <div className="space-y-4">
+        <div className="flex justify-between items-center mb-8">
+          <img
+            src="https://source.unsplash.com/1483058712412-4245e9b90334"
+            alt="Logo 1"
+            className="w-24 h-24 object-contain rounded-lg"
+          />
+          <img
+            src="https://source.unsplash.com/1487958449943-2429e8be8625"
+            alt="Logo 2"
+            className="w-24 h-24 object-contain rounded-lg"
+          />
+        </div>
         <p>Importance des TIC, rôle stratégique de Tunisie Télécom, objectifs du stage</p>
         <div className="grid grid-cols-2 gap-4">
           <AspectRatio ratio={16 / 9} className="bg-muted">
@@ -73,6 +125,18 @@ const slides = [
     title: "Tunisie Télécom",
     content: (
       <div className="space-y-4">
+        <div className="flex justify-between items-center mb-8">
+          <img
+            src="https://source.unsplash.com/1483058712412-4245e9b90334"
+            alt="Logo 1"
+            className="w-24 h-24 object-contain rounded-lg"
+          />
+          <img
+            src="https://source.unsplash.com/1487958449943-2429e8be8625"
+            alt="Logo 2"
+            className="w-24 h-24 object-contain rounded-lg"
+          />
+        </div>
         <p>Historique, évolution, organigramme et fonctionnement des centres</p>
         <div className="grid grid-cols-2 gap-4">
           <AspectRatio ratio={16 / 9} className="bg-muted">
@@ -97,6 +161,18 @@ const slides = [
     title: "Centre de Transmission",
     content: (
       <div className="space-y-4">
+        <div className="flex justify-between items-center mb-8">
+          <img
+            src="https://source.unsplash.com/1483058712412-4245e9b90334"
+            alt="Logo 1"
+            className="w-24 h-24 object-contain rounded-lg"
+          />
+          <img
+            src="https://source.unsplash.com/1487958449943-2429e8be8625"
+            alt="Logo 2"
+            className="w-24 h-24 object-contain rounded-lg"
+          />
+        </div>
         <p>FH vs FO, mécanismes de transfert, connecteurs et modules SFP</p>
         <div className="grid grid-cols-2 gap-4">
           <AspectRatio ratio={16 / 9} className="bg-muted">
@@ -121,6 +197,18 @@ const slides = [
     title: "Réseau IP",
     content: (
       <div className="space-y-4">
+        <div className="flex justify-between items-center mb-8">
+          <img
+            src="https://source.unsplash.com/1483058712412-4245e9b90334"
+            alt="Logo 1"
+            className="w-24 h-24 object-contain rounded-lg"
+          />
+          <img
+            src="https://source.unsplash.com/1487958449943-2429e8be8625"
+            alt="Logo 2"
+            className="w-24 h-24 object-contain rounded-lg"
+          />
+        </div>
         <p>Switchs, Routeurs Cisco ASR 9010, Architecture IP à Kasserine</p>
         <div className="grid grid-cols-2 gap-4">
           <AspectRatio ratio={16 / 9} className="bg-muted">
@@ -144,7 +232,21 @@ const slides = [
   {
     title: "Conclusion Générale",
     content: (
-      <p>Expérience professionnelle enrichissante et technique, apprentissage des méthodes réelles</p>
+      <div className="space-y-4">
+        <div className="flex justify-between items-center mb-8">
+          <img
+            src="https://source.unsplash.com/1483058712412-4245e9b90334"
+            alt="Logo 1"
+            className="w-24 h-24 object-contain rounded-lg"
+          />
+          <img
+            src="https://source.unsplash.com/1487958449943-2429e8be8625"
+            alt="Logo 2"
+            className="w-24 h-24 object-contain rounded-lg"
+          />
+        </div>
+        <p>Expérience professionnelle enrichissante et technique, apprentissage des méthodes réelles</p>
+      </div>
     )
   }
 ];
