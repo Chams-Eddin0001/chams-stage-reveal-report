@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "@/components/ui/button";
@@ -289,6 +290,52 @@ const slides = [
           />
         </div>
         <p>Expérience professionnelle enrichissante et technique, apprentissage des méthodes réelles</p>
+      </div>
+    )
+  },
+  {
+    title: "Remerciements Finals",
+    content: (
+      <div className="space-y-6 text-center">
+        <div className="flex justify-between items-center mb-8">
+          <img
+            src="https://source.unsplash.com/photo-1605810230434-7631ac76ec81"
+            alt="Logo Entreprise"
+            className="w-24 h-24 object-contain rounded-lg"
+          />
+          <img
+            src="https://source.unsplash.com/photo-1519389950473-47ba0277781c"
+            alt="Logo Université"
+            className="w-24 h-24 object-contain rounded-lg"
+          />
+        </div>
+        <h2 className="text-2xl font-bold mb-4 text-cyan-300">
+          Mes Remerciements Sincères
+        </h2>
+        <p className="text-xl mb-4">
+          Un immense merci aux membres du jury pour leur temps, 
+          leur attention et leurs précieux conseils.
+        </p>
+        <p className="text-lg italic text-cyan-200">
+          Votre expertise et votre bienveillance ont été essentielles 
+          dans mon parcours d'apprentissage.
+        </p>
+        <div className="grid grid-cols-2 gap-4 mt-8">
+          <AspectRatio ratio={16 / 9} className="bg-muted">
+            <img
+              src="https://source.unsplash.com/photo-1486312338219-ce68d2c6f44d"
+              alt="Présentation"
+              className="rounded-lg object-cover w-full h-full transition-all hover:scale-105"
+            />
+          </AspectRatio>
+          <AspectRatio ratio={16 / 9} className="bg-muted">
+            <img
+              src="https://source.unsplash.com/photo-1519389950473-47ba0277781c"
+              alt="Jury"
+              className="rounded-lg object-cover w-full h-full transition-all hover:scale-105"
+            />
+          </AspectRatio>
+        </div>
       </div>
     )
   }
