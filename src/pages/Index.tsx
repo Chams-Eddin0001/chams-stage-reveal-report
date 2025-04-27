@@ -1,10 +1,9 @@
-
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
-import { Flower, FlowerIcon, Sparkles, Star, Flame, Firework } from "lucide-react";
+import { Flower, FlowerIcon, Sparkles, Star, Flame } from "lucide-react";
 
 const FallbackIcon = () => (
   <div className="w-10 h-10 bg-pink-300/20 rounded-full animate-pulse"></div>
@@ -282,7 +281,7 @@ const slides = [
                 ease: "easeOut"
               }}
             >
-              <Firework className={`w-${Math.floor(Math.random() * 16) + 8} h-${Math.floor(Math.random() * 16) + 8} text-${['pink', 'cyan', 'purple', 'yellow', 'rose'][Math.floor(Math.random() * 5)]}-${Math.floor(Math.random() * 3) + 3}00`} />
+              <Sparkles className={`w-${Math.floor(Math.random() * 16) + 8} h-${Math.floor(Math.random() * 16) + 8} text-${['pink', 'cyan', 'purple', 'yellow', 'rose'][Math.floor(Math.random() * 5)]}-${Math.floor(Math.random() * 3) + 3}00`} />
             </motion.div>
           ))}
         </div>
@@ -315,7 +314,7 @@ const slides = [
               delay: 1
             }}
           >
-            <Firework className="text-cyan-300 w-20 h-20 drop-shadow-[0_0_15px_rgba(0,255,255,0.5)]" />
+            <Sparkles className="text-cyan-300 w-20 h-20 drop-shadow-[0_0_15px_rgba(0,255,255,0.5)]" />
           </motion.div>
           
           <motion.div
