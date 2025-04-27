@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
+import { Flower } from "lucide-react";
 
 const FallbackIcon = () => (
   <div className="w-10 h-10 bg-cyan-300/20 rounded-full animate-pulse"></div>
@@ -335,6 +336,23 @@ const slides = [
             />
           </AspectRatio>
         </div>
+        <motion.div 
+          className="mt-12 flex justify-center"
+          animate={{
+            scale: [1, 1.2, 1],
+            rotate: [0, 360],
+          }}
+          transition={{
+            duration: 5,
+            repeat: Infinity,
+            ease: "easeInOut"
+          }}
+        >
+          <Flower 
+            className="text-cyan-300 w-24 h-24 drop-shadow-[0_0_15px_rgba(0,255,255,0.5)]"
+            strokeWidth={1.5}
+          />
+        </motion.div>
       </div>
     )
   }
